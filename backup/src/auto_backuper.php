@@ -73,7 +73,7 @@ $url = "https://api.telegram.org/bot$botToken/sendDocument";
 $postFields = [
     'chat_id' => $chatId,
     'document' => new CURLFile($zipFile),
-    'caption' => "✅ #MirzaBOT Backup Created...!\n   - https://github.com/im-JvD/MirzaBOT-hostBackuper" 
+    'caption' => "✅ #MirzaBOT Backup Created...!\n   - https://github.com/im-JvD/MySQL_Backuper" 
 ];
 
 $ch = curl_init();
@@ -88,4 +88,5 @@ $response = curl_exec($ch);
 curl_close($ch);
 
 /* ================== DONE ================== */
+
 
