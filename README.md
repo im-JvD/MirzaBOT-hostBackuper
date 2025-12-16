@@ -20,16 +20,28 @@
   - در این مرحله لازمه که 2 کرون جاب ، یکی برای ایجاد دیتابیس در هاست و دومی برای فشرده سازی و ارسال در تلگرام ایجاد کنید
 
   **کرون جاب اول :** ایجاد دیتابیس در هاست
+#### ScreenShot
+<p align="left">
+  <img src="https://github.com/im-JvD/MirzaBOT-hostBackuper/blob/main/CronJob-1.png" width="460px" />
+</p>
+اگر طبق تصویر بالا کرون جابتون رو تنظیم کنید ، دقایق 29 و 59 هر ساعت ، از دیتابیس میزرابات بکاپ میگیره
 
+#### Command
 ```
 mysqldump --single-transaction --quick -u $DB_USERNAME -p$DB_PASSWORD $DB_NAME > /home/HOSTPATH/public_html/backup/MirzaBOT.sql
 ```
 ‌
   **کرون جاب دوم :** ارسال فایل فشرده‌سازی شده در تلگرام
+#### ScreenShot
+<p align="left">
+  <img src="https://github.com/im-JvD/MirzaBOT-hostBackuper/blob/main/CronJob-2.png" width="460px" />
+</p>
+اگر طبق تصویر بالا کرون جابتون رو تنظیم کنید ، دقایق 00 و 30 هر ساعت ، از دیتابیس میزرابات بکاپ میگیره
 
+#### Command
 ```
 php /home/$HOSTPATH/public_html/backup/src/auto_backuper.php
 ```
 
-- لازم به ذکره هست که مقادیر در کرون جاب رو که شامل `$DB_USERNAME` و `$DB_PASSWORD` و `$DB_NAME` و `$HOSTPATH` هست رو طبق مشخصات دیتابیس و دایکتوری هاستتون اصلاح کنید
+- لازم به ذکره که مقادیر در دستور `Command` کرون جاب رو که شامل `$DB_USERNAME` و `$DB_PASSWORD` و `$DB_NAME` و `$HOSTPATH` هست رو طبق مشخصات دیتابیس و دایکتوری هاستتون اصلاح کنید
  
